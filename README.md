@@ -8,7 +8,7 @@ A serverless AWS Lambda function that renders a live dashboard showing your EC2 
 
 - 📊 Half-circle gauge showing % of monthly data cap used
 - 📦 Total used, remaining, download, and upload in GB
-- 💰 AWS cost used this month
+- 💰 AWS cost used this month (CAN COST)
 - 🟢 Colour-coded: green → amber → red as you approach your cap
 - 🔄 Live data on every page refresh
 
@@ -42,7 +42,7 @@ Attach these managed policies to your Lambda's execution role (**IAM → Roles �
 
 - `CloudWatchReadOnlyAccess`
 - `AmazonEC2ReadOnlyAccess`
-- `AWSBillingReadOnlyAccess`
+- `AWSBillingReadOnlyAccess` (Dont add this policy if you dont want to see your billing as calling this api cost $0.01 per call of your precious credits)
 
 ### 5. Create a Function URL
 
